@@ -16,10 +16,11 @@ jobs:
         run: ls -al $GITHUB_WORKSPACE/target
       - uses: actions/upload-artifact@v4
         with:
-          name: my-artifact
+          name: verademo
           path: target/verademo.war
   pipeline-scan:
     runs-on: ubuntu-latest
+    needs: build
     steps:
       - name: checkout repository
         uses: actions/checkout@v4
@@ -28,7 +29,7 @@ jobs:
       - name: get archive
         uses: actions/download-artifact@v4
         with:
-          name: my-artifact.zip
+          name: verademo
           path: .
       - name: List contents of the target path
         run: ls -al .
