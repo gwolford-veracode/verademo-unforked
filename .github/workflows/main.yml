@@ -16,7 +16,7 @@ jobs:
         run: ls -al $GITHUB_WORKSPACE/target
       - uses: actions/upload-artifact@v4
         with:
-          name: verademo
+          name: verademo.zip
           path: target/verademo.war
   pipeline-scan:
     runs-on: ubuntu-latest
@@ -28,7 +28,7 @@ jobs:
       - name: get archive
         uses: actions/download-artifact@v4
         with:
-          name: verademo
+          name: verademo.zip
           path: target/verademo.war
       - name: Set up JDK 1.8
         uses: actions/setup-java@v1
