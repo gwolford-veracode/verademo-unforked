@@ -29,7 +29,7 @@ jobs:
         uses: actions/download-artifact@v4
         with:
           name: verademo
-          path: verademo.war
+          path: .
       - name: Set up JDK 1.8
         uses: actions/setup-java@v1
         with:
