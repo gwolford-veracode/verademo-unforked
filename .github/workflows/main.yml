@@ -8,6 +8,8 @@ jobs:
     steps:
       - name: Print current path
         run: echo "Current path is $GITHUB_WORKSPACE"
+      - name: List contents of the current path
+        run: ls -al $GITHUB_WORKSPACE
       - name: build
         run: mvn clean package
   pipeline-scan:
