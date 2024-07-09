@@ -7,7 +7,7 @@ jobs:
     runs-on: ubuntu-latest
     steps:
       - name: build
-        run: mvn clean package
+        run: mvn -f /home/runner/work/verademo-unforked/pom.xml clean package
   pipeline-scan:
     runs-on: ubuntu-latest
     steps:
