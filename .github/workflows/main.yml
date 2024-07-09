@@ -28,7 +28,7 @@ jobs:
       - name: get archive
         uses: actions/download-artifact@v4
         with:
-          name: my-artifact
+          name: my-artifact.zip
           path: .
       - name: List contents of the target path
         run: ls -al .
