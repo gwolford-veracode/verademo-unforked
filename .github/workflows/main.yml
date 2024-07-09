@@ -42,7 +42,7 @@ jobs:
       - name: List contents of the target path
         run: ls -al .
       - name: Unzip the Pipeline Scanner
-        run: unzip pipeline-scan-LATEST.zip
+        run: unzip -n pipeline-scan-LATEST.zip
       - name: Run Pipeline Scanner
         run: java -Dpipeline.debug=true -jar pipeline-scan.jar --veracode_api_id "${{secrets.VERACODE_API_ID}}" --veracode_api_key "${{secrets.VERACODE_API_KEY}}" --file "verademo.war" --fail_on_severity="Very High, High"
         
